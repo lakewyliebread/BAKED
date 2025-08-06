@@ -116,6 +116,9 @@
             height: auto;
             border-radius: 8px;
         }
+        .broken-image {
+            border: 2px solid red; /* Highlight broken image for debugging */
+        }
     </style>
 </head>
 <body>
@@ -124,7 +127,7 @@
         <p>We believe in perfecting one sourdough, baked fresh and delivered to your door.</p>
     </header>
     <div class="container">
-        <img src="/Untitled design (7).png" alt="Lake Wylie Bread Co. Fresh Bread" class="hero-image"> <!-- Image path -->
+        <img src="/Untitled design (7).png" alt="Lake Wylie Bread Co. Fresh Bread" class="hero-image broken-image" onerror="this.classList.add('broken-image'); console.log('Image load failed:', this.src);"> <!-- Debug with error handling -->
         <section id="menu">
             <h2>Our Bread</h2>
             <p>A handcrafted, tangy Earthbound Sourdough, slow-fermented with pure spring water, sea salt, and organic unbleached flour for a rustic, wholesome loaf.</p>
