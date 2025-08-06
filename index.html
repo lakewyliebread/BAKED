@@ -6,6 +6,7 @@
     <title>Lake Wylie Bread Co.</title>
     <meta name="theme-color" content="#1a2525">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/android-chrome-512x512.png"> <!-- Updated with exact favicon name -->
     <style>
         body {
             font-family: 'Courier Prime', monospace;
@@ -108,19 +109,22 @@
         a:hover {
             color: #f5e6cc;
         }
-        #order img {
+        .hero-image {
+            display: block;
+            margin: 1em auto;
             max-width: 100%;
             height: auto;
-            margin-bottom: 1em;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Lake Wylie Bread Co.</h1>
-        <p>We believe in perfecting one sourdough, baked fresh and delivered to your door.</p>
+        <p>We believe in perfecting one sourdough, baked free and delivered to your door.</p>
     </header>
     <div class="container">
+        <img src="/Untitled design (7).png" alt="Lake Wylie Bread Co. Fresh Bread" class="hero-image"> <!-- Updated with exact image name -->
         <section id="menu">
             <h2>Our Bread</h2>
             <p>A handcrafted, tangy Earthbound Sourdough, slow-fermented with pure spring water, sea salt, and organic unbleached flour for a rustic, wholesome loaf.</p>
@@ -134,7 +138,6 @@
             </div>
         </section>
         <section id="order">
-            <img src="logo.png" alt="Lake Wylie Bread Co. Logo">
             <h2>Place Your Order</h2>
             <p>We deliver fresh DeadHead Sourdough to Lake Wylie, SC (29710) every Saturday morning for FREE. Orders must be placed by Thursday, 9 PM. Fill out the form below, and we'll contact you to confirm. Payment via Venmo (<a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a>) or cash on delivery.</p>
             <form action="https://formspree.io/f/mvgqbknw" method="POST">
@@ -160,8 +163,8 @@
         </section>
     </div>
     <footer>
-        <p>Contact us: <a href="mailto:lakewyliebread@gmail.com">lakewyliebread@gmail.com</a> | Venmo: <a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a> | Follow us on X: <a href="https://x.com/lakewyliebread" target="_blank">lakewyliebread</a></p>
-        <p>Note: Orders are first-come, first-served. Keep on truckin'! | Free Delivery to Lake Wylie, SC (29710) only</p>
+        <p>Contact us: <a href="mailto:lakewyliebread@gmail.com">lakewyliebread@gmail.com</a> | Venmo: <a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a> | Free Delivery to Lake Wylie, SC (29710) only</p>
+        <p>Note: Orders are first-come, first-served. Keep on truckin'!</p>
     </footer>
     <script>
         document.querySelector('form').addEventListener('submit', function(event) {
