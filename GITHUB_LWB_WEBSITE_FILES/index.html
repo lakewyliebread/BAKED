@@ -6,7 +6,7 @@
     <title>Lake Wylie Bread Co.</title>
     <meta name="theme-color" content="#1a2525">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/GITHUB_LWB_WEBSITE_FILES/android-chrome-512x512.png"> <!-- Updated favicon path -->
+    <link rel="icon" type="image/png" href="/GITHUB_LWB_WEBSITE_FILES/android-chrome-512x512.png"> <!-- Favicon path -->
     <style>
         body {
             font-family: 'Courier Prime', monospace;
@@ -124,7 +124,7 @@
         <p>We believe in perfecting one sourdough, baked fresh and delivered to your door.</p>
     </header>
     <div class="container">
-        <img src="/GITHUB_LWB_WEBSITE_FILES/Untitled design (7).png" alt="Lake Wylie Bread Co. Fresh Bread" class="hero-image"> <!-- Updated image path -->
+        <img src="/GITHUB_LWB_WEBSITE_FILES/Untitled design (7).png" alt="Lake Wylie Bread Co. Fresh Bread" class="hero-image">
         <section id="menu">
             <h2>Our Bread</h2>
             <p>A handcrafted, tangy Earthbound Sourdough, slow-fermented with pure spring water, sea salt, and organic unbleached flour for a rustic, wholesome loaf.</p>
@@ -139,41 +139,4 @@
         </section>
         <section id="order">
             <h2>Place Your Order</h2>
-            <p>We deliver fresh DeadHead Sourdough to Lake Wylie, SC (29710) every Saturday morning for FREE. Orders must be placed by Thursday, 9 PM. Fill out the form below, and we'll contact you to confirm. Payment via Venmo (<a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a>) or cash on delivery.</p>
-            <form action="https://formspree.io/f/mvgqbknw" method="POST">
-                <input type="hidden" name="_subject" value="New Bread Order - Lake Wylie Bread Co.">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="address">Delivery Address (Lake Wylie, SC 29710)</label>
-                <input type="text" id="address" name="address" required>
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="size">Select Size</label>
-                <select id="size" name="size" required>
-                    <option value="">Choose a size</option>
-                    <option value="Small ($7.50)">Small ($7.50)</option>
-                    <option value="Large ($10)">Large ($10)</option>
-                </select>
-                <label for="quantity">Quantity</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
-                <label for="notes">Special Instructions</label>
-                <textarea id="notes" name="notes" rows="4"></textarea>
-                <button type="submit">Submit Order</button>
-            </form>
-        </section>
-    </div>
-    <footer>
-        <p>Contact us: <a href="mailto:lakewyliebread@gmail.com">lakewyliebread@gmail.com</a> | Venmo: <a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a> | Free Delivery to Lake Wylie, SC (29710) only</p>
-        <p>Note: Orders are first-come, first-served. Keep on truckin'!</p>
-    </footer>
-    <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            const address = document.getElementById('address').value;
-            if (!address.includes('29710')) {
-                event.preventDefault();
-                alert('Sorry, we only deliver to Lake Wylie, SC (ZIP code 29710). Please check your address.');
-            }
-        });
-    </script>
-</body>
-</html>
+            <p>We deliver fresh DeadHead Sourdough to Lake Wylie, SC (29710) every Saturday morning for FREE. Orders must be placed by Thursday, 9 PM. Fill out the form below, and we'll contact you to confirm. Payment via Venmo (<a href="https://venmo.com/lakewyliebread
