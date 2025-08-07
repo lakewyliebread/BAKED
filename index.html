@@ -108,6 +108,14 @@
         a:hover {
             color: #f5e6cc;
         }
+        .order-image {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .order-image img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -120,30 +128,33 @@
             <h2>Our Bread</h2>
             <p>A handcrafted, tangy Earthbound Sourdough, slow-fermented with pure spring water, sea salt, and organic unbleached flour for a rustic, wholesome loaf.</p>
             <div class="menu-item">
-                <h3>Small DeadHead Sourdough ($7.50)</h3>
+                <h3>Small Earthbound Sourdough ($7.50)</h3>
                 <p>Perfect for a single serving or small gathering.</p>
             </div>
             <div class="menu-item">
-                <h3>Large DeadHead Sourdough ($10)</h3>
+                <h3>Large 'The Motherloaf' Sourdough ($10)</h3>
                 <p>Ideal for sharing or savoring over multiple meals.</p>
             </div>
         </section>
         <section id="order">
+            <div class="order-image">
+                <img src="logo.jpg" alt="Lake Wylie Bread Company Logo">
+            </div>
             <h2>Place Your Order</h2>
-            <p>We deliver fresh DeadHead Sourdough to Lake Wylie, SC (29710) every Saturday morning for FREE. Orders must be placed by Thursday, 9 PM. Fill out the form below, and we'll contact you to confirm. Payment via Venmo (<a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a>) or cash on delivery.</p>
+            <p>We deliver weekly to Lake Wylie, SC (29710) every Saturday morning for FREE. Orders must be placed by Thursday, 9 PM. Fill out the form below, and we'll contact you to confirm. Payment via Venmo (<a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a>) or cash on delivery.</p>
             <form action="https://formspree.io/f/mvgqbknw" method="POST">
                 <input type="hidden" name="_subject" value="New Bread Order - Lake Wylie Bread Co.">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
-                <label for="address">Delivery Address (Lake Wylie, SC 29710)</label>
+                <label for="address">Delivery Address (Lake Wylie, SC 29710 or River Hills)</label>
                 <input type="text" id="address" name="address" required>
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone" required>
                 <label for="size">Select Size</label>
                 <select id="size" name="size" required>
                     <option value="">Choose a size</option>
-                    <option value="Small ($7.50)">Small ($7.50)</option>
-                    <option value="Large ($10)">Large ($10)</option>
+                    <option value="Small Earthbound Sourdough ($7.50)">Small Earthbound Sourdough ($7.50)</option>
+                    <option value="Large 'The Motherloaf' Sourdough ($10)">Large 'The Motherloaf' Sourdough ($10)</option>
                 </select>
                 <label for="quantity">Quantity</label>
                 <input type="number" id="quantity" name="quantity" min="1" value="1" required>
@@ -154,15 +165,14 @@
         </section>
     </div>
     <footer>
-        <p>Contact us: <a href="mailto:lakewyliebread@gmail.com">lakewyliebread@gmail.com</a> | Venmo: <a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a> | Free Delivery to Lake Wylie, SC (29710) only</p>
-        <p>Note: Orders are first-come, first-served. Keep on truckin'!</p>
+        <p>Contact us: lakewyliebread@gmail.com | Venmo: @lakewyliebread | X: @lakewyliebread | We exclusively deliver to Lake Wylie, SC 29710 and River Hills. Keepin' it local. Note: Orders are first-come, first-served.</p>
     </footer>
     <script>
         document.querySelector('form').addEventListener('submit', function(event) {
-            const address = document.getElementById('address').value;
-            if (!address.includes('29710')) {
+            const address = document.getElementById('address').value.toLowerCase();
+            if (!address.includes('29710') && !address.includes('river hills')) {
                 event.preventDefault();
-                alert('Sorry, we only deliver to Lake Wylie, SC (ZIP code 29710). Please check your address.');
+                alert('Sorry, we only deliver to Lake Wylie, SC (ZIP code 29710) and River Hills. Please check your address.');
             }
         });
     </script>
