@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Wylie Bread Co.</title>
+    <meta name="theme-color" content="#1a2525">
+    <link rel="apple-touch-icon" sizes="180x180" href="/BAKED/apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/BAKED/favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="/BAKED/favicon-16x16.png?v=1">
+    <link rel="manifest" href="/BAKED/site.webmanifest?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Courier Prime', monospace;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #1a2525, #2e3b3e, #1c2f2f, #1a2525);
+            background-size: 600%;
+            animation: oceanWaves 12s ease-in-out infinite;
+            color: #f5e6cc;
+            line-height: 1.6;
+        }
+        @keyframes oceanWaves {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 50% 75%; }
+            50% { background-position: 100% 50%; }
+            75% { background-position: 50% 25%; }
+            100% { background-position: 0% 50%; }
+        }
+        header {
+            background: rgba(26, 37, 37, 0.9);
+            text-align: center;
+            padding: 2em;
+            border-bottom: 3px solid #f5e6cc;
+        }
+        h2 {
+            color: #f5e6cc;
+            font-size: 1.5em;
+        }
+        .container {
+            max-width: 700px;
+            margin: 2em auto;
+            padding: 1em;
+            background: rgba(26, 37, 37, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .menu-item {
+            background: rgba(46, 59, 62, 0.95);
+            border: 1px solid #f5e6cc;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 5px;
+        }
+        .menu-item h3 {
+            margin: 0 0 0.5em;
+            color: #f5e6cc;
+            font-size: 1.3em;
+        }
+        form {
+            background: rgba(46, 59, 62, 0.95);
+            padding: 1.5em;
+            border-radius: 5px;
+            border: 1px solid #f5e6cc;
+        }
+        label {
+            display: block;
+            margin: 0.5em 0 0.2em;
+            color: #f5e6cc;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.6em;
+            margin-bottom: 1em;
+            border: 1px solid #f5e6cc;
+            border-radius: 4px;
+            font-family: 'Courier Prime', monospace;
+            background: #2e3b3e;
+            color: #f5e6cc;
+        }
+        button {
+            background: #4a6363;
+            color: #f5e6cc;
+            padding: 0.8em 1.5em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Courier Prime', monospace;
+            font-size: 1em;
+        }
+        button:hover {
+            background: #5b7a7a;
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: rgba(26, 37, 37, 0.9);
+            color: #f5e6cc;
+            border-top: 3px solid #f5e6cc;
+        }
+        a {
+            color: #a8c7c7;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f5e6cc;
+        }
+        .order-image {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .order-image img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+    <div class="container">
+        <section id="menu">
+            <h2>Our Daily Bread</h2>
+            <p>Slow-baked with pure spring water, sea salt, and organic unbleached flour for a wholesome loaf.</p>
+            <div class="menu-item">
+                <h3>Small Sourdough ($7.50)</h3>
+                <p>Perfect for a single serving or small gathering.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Large 'The Motherloaf' Sourdough ($10)</h3>
+                <p>Ideal for sharing or savoring over multiple meals.</p>
+            </div>
+        </section>
+        <section id="order">
+            <div class="order-image">
+                <img src="/BAKED/logo.jpg" alt="Lake Wylie Bread Company Logo">
+            </div>
+            <h2>Place Your Order</h2>
+            <p>We deliver weekly to Lake Wylie, SC (29710) every Saturday morning for FREE. Orders must be placed by Thursday, 9 PM. Fill out the form below, and we'll contact you to confirm. Payment via Venmo (<a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a>) or cash on delivery.</p>
+            <form action="https://formspree.io/f/mvgqbknw" method="POST">
+                <input type="hidden" name="_subject" value="New Bread Order - Lake Wylie Bread Co.">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="address">Delivery Address (Lake Wylie, SC 29710 or River Hills)</label>
+                <input type="text" id="address" name="address" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="size">Select Size</label>
+                <select id="size" name="size" required>
+                    <option value="">Choose a size</option>
+                    <option value="Small Sourdough ($7.50)">Small Sourdough ($7.50)</option>
+                    <option value="Large 'The Motherloaf' Sourdough ($10)">Large 'The Motherloaf' Sourdough ($10)</option>
+                </select>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                <label for="notes">Special Instructions</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>Contact us: <a href="mailto:lakewyliebread@gmail.com">lakewyliebread@gmail.com</a> | Venmo: <a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a> | X: <a href="https://x.com/lakewyliebread" target="_blank">@lakewyliebread</a></p>
+        <p>We deliver to Lake Wylie, SC 29710 and River Hills exclusively. Note: Orders are first-come, first-served.</p>
+    </footer>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const address = document.getElementById('address').value.toLowerCase();
+            if (!address.includes('29710') && !address.includes('river hills')) {
+                event.preventDefault();
+                alert('Sorry, we only deliver to Lake Wylie, SC (ZIP code 29710) and River Hills. Please check your address.');
+            }
+        });
+    </script>
+</body>
+</html>
