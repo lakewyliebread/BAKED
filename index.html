@@ -58,6 +58,17 @@
             color: #f5e6cc;
             font-size: 1.3em;
         }
+        .sold-out {
+            color: #f5e6cc;
+            opacity: 0.7;
+        }
+        .strike-price {
+            text-decoration: line-through;
+            color: #A9C4A8; /* Sage green */
+        }
+        .sold-out-text {
+            color: #A9C4A8; /* Sage green */
+        }
         form {
             background: rgba(46, 59, 62, 0.95);
             padding: 1.5em;
@@ -78,6 +89,10 @@
             font-family: 'Courier Prime', monospace;
             background: #2e3b3e;
             color: #f5e6cc;
+        }
+        select option[disabled] {
+            color: #888888;
+            opacity: 0.5;
         }
         button {
             background: #4a6363;
@@ -142,8 +157,8 @@
             </div>
             <div class="menu-item">
                 <p class="centered"><h3 class="sage-green-aqua-outline">Our Weekly Local Loaf</h3></p>
-                <p class="centered"><h3>Artisan Herbed Rosemary Olive Oil ($15.50)</h3></p>
-                <p>Slow-baked with savory herbs, fresh rosemary, olive oil, sea salt, unbleached organic flour and pure spring water.</p>
+                <p class="centered"><h3 class="sold-out">Artisan Herbed Rosemary Olive Oil (<span class="strike-price">$15.50</span> <span class="sold-out-text">SOLD OUT</span>)</h3></p>
+                <p>Slow-baked with savory herbs, fresh rosemary, olive oil, sea salt, unbleached organic flour and pure spring water. <strong>Sold Out</strong></p>
             </div>
         </section>
         <section id="order">
@@ -165,7 +180,7 @@
                     <option value="">Choose a size</option>
                     <option value="Small Sourdough ($7.50)">Small Sourdough ($7.50)</option>
                     <option value="Large 'The Motherloaf' Sourdough ($10)">Large 'The Motherloaf' Sourdough ($10)</option>
-                    <option value="Artisan Herbed Rosemary Olive Oil ($15.50)">Artisan Herbed Rosemary Olive Oil ($15.50)</option>
+                    <option value="Artisan Herbed Rosemary Olive Oil ($15.50)" disabled>Artisan Herbed Rosemary Olive Oil ($15.50) - Sold Out</option>
                 </select>
                 <label for="quantity">Quantity</label>
                 <input type="number" id="quantity" name="quantity" min="1" value="1" required>
