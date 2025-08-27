@@ -138,18 +138,20 @@
 </head>
 <body>
     <header>
+        <h1>Thank You!</h1>
+        <p>We appreciate your orders this week at Lake Wylie Bread Co.!</p>
     </header>
     <div class="container">
         <section id="menu">
             <h2>Our Daily Bread</h2>
             <p>Slow-baked with pure spring water, sea salt, and organic unbleached flour for a wholesome loaf.</p>
             <div class="menu-item">
-                <h3>Small Sourdough ($7.50)</h3>
-                <p>Perfect for a single serving or small gathering.</p>
+                <h3>Small Sourdough <span class="sold-out-text">(<span class="strike-price">$7.50</span> SOLD OUT)</span></h3>
+                <p>Perfect for a single serving or small gathering. <strong>Sold Out</strong></p>
             </div>
             <div class="menu-item">
-                <h3>Large 'The Motherloaf' Sourdough ($10)</h3>
-                <p>Ideal for sharing or savoring over multiple meals.</p>
+                <h3>Large 'The Motherloaf' Sourdough <span class="sold-out-text">(<span class="strike-price">$10</span> SOLD OUT)</span></h3>
+                <p>Ideal for sharing or savoring over multiple meals. <strong>Sold Out</strong></p>
             </div>
             <div class="menu-item">
                 <p class="centered"><h3 class="sage-green-aqua-outline">Our Weekly Local Loaf</h3></p>
@@ -174,8 +176,8 @@
                 <label for="size">Select Size</label>
                 <select id="size" name="size" required>
                     <option value="">Choose a size</option>
-                    <option value="Small Sourdough ($7.50)">Small Sourdough ($7.50)</option>
-                    <option value="Large 'The Motherloaf' Sourdough ($10)">Large 'The Motherloaf' Sourdough ($10)</option>
+                    <option value="Small Sourdough ($7.50)" disabled>Small Sourdough ($7.50) - Sold Out</option>
+                    <option value="Large 'The Motherloaf' Sourdough ($10)" disabled>Large 'The Motherloaf' Sourdough ($10) - Sold Out</option>
                     <option value="Artisan Herbed Rosemary Olive Oil ($15.50)" disabled>Artisan Herbed Rosemary Olive Oil ($15.50) - Sold Out</option>
                 </select>
                 <label for="quantity">Quantity</label>
