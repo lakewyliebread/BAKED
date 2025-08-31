@@ -90,7 +90,7 @@
             opacity: 0.5;
         }
         button {
-            background: #26A69A; /* Teal */
+            background: #1a2525; /* Dark background */
             color: #f5e6cc;
             padding: 0.8em 1.5em;
             border: none;
@@ -100,7 +100,7 @@
             font-size: 1em;
         }
         button:hover {
-            background: #4DB6AC; /* Lighter teal for hover */
+            background: #2e3b3e; /* Slightly lighter dark background for hover */
         }
         footer {
             text-align: center;
@@ -110,7 +110,7 @@
             border-top: 3px solid #f5e6cc;
         }
         a {
-            color: #26A69A; /* Teal */
+            color: #A9C4A8; /* Sage green */
             text-decoration: none;
         }
         a:hover {
@@ -126,6 +126,9 @@
         }
         .centered {
             text-align: center;
+        }
+        .sage-green-text {
+            color: #A9C4A8; /* Sage green */
         }
         .sage-green-aqua-outline {
             color: #A9C4A8;
@@ -145,24 +148,25 @@
 </head>
 <body>
     <header>
-        <h1>Thank You!</h1>
-        <p>We appreciate your orders this week! Be sure to check back Monday...</p>
+        <h1>Lake Wylie Bread Co.</h1>
+        <p class="centered">We're officially opening October 1st for Fall!</p>
+        <p class="centered">Hope to see you soon!</p>
     </header>
     <div class="container">
         <section id="menu">
             <h2>Our Daily Bread</h2>
             <p>Slow-baked with pure spring water, sea salt, and organic unbleached flour for a wholesome loaf.</p>
             <div class="menu-item">
-                <h3>Small Sourdough <span class="sold-out-text">(<span class="strike-price">$7.50</span> SOLD OUT)</span></h3>
+                <h3>Small Sourdough ($7.50)</h3>
                 <p>Perfect for a single serving or small gathering.</p>
             </div>
             <div class="menu-item">
-                <h3>Large 'The Motherloaf' Sourdough <span class="sold-out-text">(<span class="strike-price">$10</span> SOLD OUT)</span></h3>
+                <h3>Large 'The Motherloaf' Sourdough ($10)</h3>
                 <p>Ideal for sharing or savoring over multiple meals.</p>
             </div>
             <div class="menu-item">
                 <p class="centered"><h3 class="sage-green-aqua-outline">Our Weekly Local Loaf</h3></p>
-                <p class="centered"><h3>Artisan Herbed Rosemary Olive Oil <span class="sold-out-text">(<span class="strike-price">$15.50</span> SOLD OUT)</span></h3></p>
+                <p class="centered"><h3>Artisan Herbed Rosemary Olive Oil ($15.50)</h3></p>
                 <p>Slow-baked with savory herbs, fresh rosemary, olive oil, sea salt, unbleached organic flour and pure spring water.</p>
             </div>
         </section>
@@ -171,7 +175,7 @@
                 <img src="/BAKED/logo.jpg" alt="Lake Wylie Bread Company Logo">
             </div>
             <h2>Place Your Order</h2>
-            <p>We deliver weekly to Lake Wylie, SC (29710) every Saturday morning for FREE. Orders must be placed by Thursday, 9 PM. Fill out the form below, and we'll contact you to confirm. Payment via Venmo (<a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a>) or cash on delivery.</p>
+            <p>We deliver weekly to Lake Wylie, SC (29710) every Saturday morning for FREE. Orders must be placed by Thursday, 9 PM. Fill out the form below, and we'll contact you to confirm. Payment via Venmo (<a href="https://venmo.com/lakewyliebread" target="_blank" class="sage-green-text">@lakewyliebread</a>) or cash on delivery.</p>
             <form action="https://formspree.io/f/mvgqbknw" method="POST">
                 <input type="hidden" name="_subject" value="New Bread Order - Lake Wylie Bread Co.">
                 <label for="name">Name</label>
@@ -196,7 +200,7 @@
         </section>
     </div>
     <footer>
-        <p>Contact us: <a href="mailto:lakewyliebread@gmail.com">lakewyliebread@gmail.com</a> | Venmo: <a href="https://venmo.com/lakewyliebread" target="_blank">@lakewyliebread</a> | Phone: <span style="color: #26A69A;">803-818-0939</span></p>
+        <p>Contact us: <a href="mailto:lakewyliebread@gmail.com" class="sage-green-text">lakewyliebread@gmail.com</a> | Venmo: <a href="https://venmo.com/lakewyliebread" target="_blank" class="sage-green-text">@lakewyliebread</a></p>
         <p>We deliver to Lake Wylie, SC 29710 and River Hills exclusively. Note: Orders are first-come, first-served.</p>
     </footer>
     <script>
@@ -204,7 +208,7 @@
             const address = document.getElementById('address').value.toLowerCase();
             if (!address.includes('29710') && !address.includes('river hills')) {
                 event.preventDefault();
-                alert('Sorry, we only deliver to Lake Wylie, SC (ZIP code 29710) and River Hills. Please check your address.');
+                alert('Caught an error! We only deliver to Lake Wylie, SC (ZIP code 29710) and River Hills. Please check your address.');
             }
         });
     </script>
